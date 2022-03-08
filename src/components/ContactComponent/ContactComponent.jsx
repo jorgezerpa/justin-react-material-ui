@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontWeight: '600',
     },
-    savoirFaire: {
+    ContactComponent: {
         textAlign: 'center',
         padding: '10vw'
     },
@@ -20,7 +20,7 @@ const ContactComponent = () => {
   
     return (
     <div>
-        <Grid className={classes.savoirFaire} container direction='column' justifyContent='center' alignItems='center'>
+        <Grid className={classes.ContactComponent} container direction='column' justifyContent='center' alignItems='center'>
             <Grid item>
                 <Typography gutterBottom className={classes.title}>
                     CONTACT
