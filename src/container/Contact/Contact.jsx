@@ -38,17 +38,22 @@ const useStyles = makeStyles((theme) => ({
         },
       }, 
       listsContainer:{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '100px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: '100px',
+        [theme.breakpoints.down('sm')]: {
+          gap: '20px',
+        },
       },
       list: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        [theme.breakpoints.down('sm')]: {
+          alignItems: 'center',
+        },
       },
       listItem: {
         listStyle: 'none',
@@ -69,14 +74,14 @@ const Contact = () => {
                 <Typography className={classes.title} variant='h4'><span className={classes.span} >NOS</span> ADRESSES</Typography>
 
                 <div className={classes.listsContainer}>
-                  <ul className={classes.list}>
+                  <ul className={classes.list} >
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} variant='body1'>
+                      <Typography  variant='body1'>
                             Yummy noodle
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
-                      <Typography>
+                      <Typography variant='body2'>
                           185 rue de Lancry <br/>
                           75010 Paris <br/>
                           +331 44 33 55 22 <br/>
@@ -87,12 +92,12 @@ const Contact = () => {
                   
                   <ul className={classes.list}>
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} variant='body1'>
+                      <Typography  variant='body1'>
                           Yu Noodle My
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
-                      <Typography>
+                      <Typography variant='body2'>
                           350 rue Saint-Guillaume <br/>
                           75007 Paris <br/>
                           +331 44 33 55 22 <br/>
@@ -103,12 +108,12 @@ const Contact = () => {
                   
                   <ul className={classes.list}>
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} variant='body1'>
+                      <Typography  variant='body1'>
                                 Les Yummy Nouilles
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
-                      <Typography>
+                      <Typography variant='body2'>
                           208 rue au Maire <br />
                           75003 Paris <br />
                           +331 44 33 55 22 <br />
@@ -122,7 +127,7 @@ const Contact = () => {
           </Grid>  
           <Grid className={classes.containerImage} item xs={8}>
           <div>
-              <img src={map} alt="" />
+              <img src={map} style={{maxWidth: '900px'}} alt="" />
           </div>
           </Grid>  
       </Grid>

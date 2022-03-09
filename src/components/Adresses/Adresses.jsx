@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme)=>({
           display: 'none',
         },
     },
+    card:{
+      boxShadow: 'none'
+    },
     adressesItems:{
       width: '100%',
       display: 'flex',
@@ -33,19 +36,19 @@ const Adresses = () => {
     <div>
          <Grid className={classes.adresses} container justifyContent='space-evenly' alignItems='center' direction='column'>  
                   <Grid item>
-                      <Typography type='h1' gutterBottom className={classes.title}>ADRESSES</Typography>
+                      <Typography variant='h6' gutterBottom >NOS ADRESSES</Typography>
                   </Grid>  
                   
                   <Grid item className={classes.adressesItems}>
                       { images.map((image, key)=>(
-                          <Card key={key}>
+                          <Card className={classes.card} key={key}>
                               <CardMedia>
                                     <img src={ image } alt="" />
                               </CardMedia>
                               <CardContent>   
-                                  <Typography>Yummy Noodle</Typography>
-                                  <Typography>185 rue de Lancry</Typography>
-                                  <Typography>75010 Paris</Typography>
+                                  <Typography variant='body1'>Yummy Noodle</Typography>
+                                  <Typography variant='body2'>185 rue de Lancry</Typography>
+                                  <Typography variant='body2'>75010 Paris</Typography>
                               </CardContent>
                           </Card>
                       ))}

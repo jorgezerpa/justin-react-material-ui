@@ -20,7 +20,36 @@ const theme = createTheme({
         }
       },
 
+      typography: {
+        subtitle1: {
+          fontSize: 12,
+        },
+        h5: {
+          fontSize: '2.6rem',
+          letterSpacing: '.5px',
+          fontFamily: 'Bebas Neue, cursive',
+          transform: 'scaleY(1.2)'
+        },
+        h6: {
+          fontSize: '1.6rem',
+          letterSpacing: '.5px',
+          fontFamily: 'Bebas Neue, cursive',
+          borderBottom: '2px solid #f00'
+        },
+        body1: {
+          fontSize: '.8rem',
+          fontWeight: 900,
+          fontFamily: 'Montserrat, sans-serif',
+        },
+        body2: {
+          fontFamily: 'Montserrat, sans-serif',
+        },
+        
+      },
+
+      
 })
+
 
 
 function App() {

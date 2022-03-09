@@ -27,7 +27,7 @@ const ReseauxSociaux = () => {
         <div>
             <Grid className={classes.reseauxSociaux} container justifyContent='space-evenly' alignItems='center' direction='column'>  
                       <Grid item>
-                          <Typography variant='h6' className={classes.title} >retrouvez-nous sur les réseaux sociaux</Typography>
+                          <Typography variant='h6' gutterBottom className={classes.title} >retrouvez-nous sur les réseaux sociaux</Typography>
                       </Grid>  
                       
                       <Grid item className={classes.reseauxSociauxItems}>

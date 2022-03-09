@@ -24,12 +24,12 @@ const Cta = () => {
     <>
         <Grid  className={classes.container} container direction='column' spacing={1} justifyContent='flex-start' alignItems='center'>
             <Grid item>
-                <Typography>
+                <Typography variant='body2'>
                     Commandez maintenant ! 
                 </Typography>
             </Grid>
             <Grid item>
-                <Button color='secondary' variant='contained' style={{fontWeight: '600', padding: '5px 40px', borderRadius: '0'}}>
+                <Button color='secondary' variant='contained'>
                     CLICK & COLLECT
                 </Button>
             </Grid>

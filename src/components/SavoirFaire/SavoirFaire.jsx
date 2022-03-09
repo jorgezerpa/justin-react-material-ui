@@ -22,7 +22,7 @@ const SavoireFaire = () => {
     <div>
         <Grid className={classes.savoirFaire} container direction='column' justifyContent='center' alignItems='center'>
             <Grid item>
-                <Typography gutterBottom align='center' variant='h5' className={classes.title}>
+                <Typography gutterBottom align='center' variant='h6'>
                 notre savoir-faire 
                 </Typography>
             </Grid>
