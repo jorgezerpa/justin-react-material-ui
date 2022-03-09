@@ -1,5 +1,7 @@
 import React from 'react';
 
+import logo from '../../assests/images/Logo.png';
+
 import { AppBar, Toolbar, Grid, Typography } from '@material-ui/core';
 import { Menu } from '@material-ui/icons';
 
@@ -40,20 +42,22 @@ const Navbar = () => {
 
   return (
     <nav className={classes.nav}>
-        <AppBar position='static' color='transparent' className={classes.AppBar}>
+        <AppBar position='static' color='none' className={classes.AppBar}>
             <Toolbar  className={classes.toolbar}>
                 <Grid container spacing={2} alignItems='center'>
                     <Grid item>
-                        <div style={{width: '40px', height: '40px', borderRadius: '50%', background:'#ccc'}}></div>
+                        <div style={{width: '50px'}}>
+                            <img src={logo} alt="" style={{width: '100%'}} />    
+                        </div>
                     </Grid>
                     <Grid item>
-                        <Typography className={classes.menuItems} component={Link} to="/accueil" type='body2'>ACCUAIL</Typography>
+                        <Typography className={classes.menuItems} component={Link} to="/accueil" variant='body2'>ACCUAIL</Typography>
                     </Grid>
                     <Grid item>
-                        <Typography className={classes.menuItems} component={Link} to="/menu" type='body2'>MENU</Typography>
+                        <Typography className={classes.menuItems} component={Link} to="/menu" variant='body2'>MENU</Typography>
                     </Grid>
                     <Grid item>
-                        <Typography className={classes.menuItems} component={Link} to="/contact" type='body2'>CONTACT</Typography>
+                        <Typography className={classes.menuItems} component={Link} to="/contact" variant='body2'>CONTACT</Typography>
                     </Grid>
                 </Grid>
 

@@ -5,12 +5,15 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
     container:{
+        overflowX:'hidden',
+        background: '#D2483D',
+        color: '#fff',
         height: '150px',
         paddingTop: '30px',
         marginBottom: '100px',
         borderTop: '1px solid #ccc',
         borderBottom: '1px solid #ccc',
-    }
+    },
 }));
 
 const Cta = () => {
@@ -19,15 +22,15 @@ const Cta = () => {
 
   return (
     <>
-        <Grid className={classes.container} container direction='column' spacing={1} justifyContent='flex-start' alignItems='center'>
+        <Grid  className={classes.container} container direction='column' spacing={1} justifyContent='flex-start' alignItems='center'>
             <Grid item>
                 <Typography>
-                    Lorem, ipsum dolor sit amet 
+                    Commandez maintenant ! 
                 </Typography>
             </Grid>
             <Grid item>
-                <Button variant='contained' style={{fontWeight: '600', padding: '5px 100px'}}>
-                    CTA
+                <Button color='secondary' variant='contained' style={{fontWeight: '600', padding: '5px 40px', borderRadius: '0'}}>
+                    CLICK & COLLECT
                 </Button>
             </Grid>
         </Grid>                

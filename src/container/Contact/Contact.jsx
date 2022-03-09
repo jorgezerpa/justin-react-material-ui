@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { map } from '../../constants/images';
+
 import { Grid, Typography } from '@material-ui/core';
 
 import { Cta } from '../../components';
@@ -9,6 +11,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
       container:{
         width: '100%',
+        overflowX: 'hidden'
       },
       subtitle: {
         fontWeight: '600',
@@ -22,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         },
       },
       containerItem: {
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
@@ -33,6 +37,13 @@ const useStyles = makeStyles((theme) => ({
           display: 'none'
         },
       }, 
+      listsContainer:{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          gap: '100px',
+      },
       list: {
         display: 'flex',
         flexDirection: 'column',
@@ -53,84 +64,66 @@ const Contact = () => {
     <>
       <Cta />
 
-      <Grid className={classes.container} container justifyContent='center' alignItems='center' spacing={2}>
+      <Grid className={classes.container} container justifyContent='center' alignItems='flex-start'>
           <Grid className={classes.containerItem} item xs={4}>
-                <Typography className={classes.title}><span className={classes.span}>NOS</span> ADRESSES</Typography>
+                <Typography className={classes.title} variant='h4'><span className={classes.span} >NOS</span> ADRESSES</Typography>
 
-                <div>
+                <div className={classes.listsContainer}>
                   <ul className={classes.list}>
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} type='h2'>
-                          Restaurant 1
+                      <Typography className={classes.subtitle} variant='body1'>
+                            Yummy noodle
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
                       <Typography>
-                          Adresse 1
-                      </Typography>
-                      </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Téléphone 1
-                      </Typography>
-                      </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Horaires 1
+                          185 rue de Lancry <br/>
+                          75010 Paris <br/>
+                          +331 44 33 55 22 <br/>
+                          Lundi à Dimanche - 12h à 23h <br/>
                       </Typography>
                       </li>
                   </ul>
                   
                   <ul className={classes.list}>
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} type='h2'>
-                          Restaurant 1
+                      <Typography className={classes.subtitle} variant='body1'>
+                          Yu Noodle My
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
                       <Typography>
-                          Adresse 1
-                      </Typography>
-                      </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Téléphone 1
-                      </Typography>
-                      </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Horaires 1
+                          350 rue Saint-Guillaume <br/>
+                          75007 Paris <br/>
+                          +331 44 33 55 22 <br/>
+                          Lundi à Vendredi - 12h à 22h <br/>
                       </Typography>
                       </li>
                   </ul>
                   
                   <ul className={classes.list}>
                     <li className={classes.listItem}>
-                      <Typography className={classes.subtitle} type='h2'>
-                          Restaurant 1
+                      <Typography className={classes.subtitle} variant='body1'>
+                                Les Yummy Nouilles
                       </Typography>
                     </li>
                     <li className={classes.listItem}>
                       <Typography>
-                          Adresse 1
+                          208 rue au Maire <br />
+                          75003 Paris <br />
+                          +331 44 33 55 22 <br />
+                          Lundi à Dimanche - 12h à 23h <br />
                       </Typography>
                       </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Téléphone 1
-                      </Typography>
-                      </li>
-                    <li className={classes.listItem}>
-                      <Typography>
-                          Horaires 1
-                      </Typography>
-                      </li>
+                   
                   </ul>
                   
                 </div>
           </Grid>  
           <Grid className={classes.containerImage} item xs={8}>
-          <div style={{width: '100%', height: '500px', background: '#ccc'}}></div>
+          <div>
+              <img src={map} alt="" />
+          </div>
           </Grid>  
       </Grid>
     
