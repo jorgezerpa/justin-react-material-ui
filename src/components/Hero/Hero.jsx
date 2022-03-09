@@ -3,31 +3,8 @@ import React from 'react';
 import logo from '../../assests/images/Logo.png';
 
 import { Grid, Typography, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles((theme)=>({
-      span:{
-        color: '#D2483D'
-      },
-      hero:{
-        marginTop: '50px',
-        marginBottom: '100px',
-      },
-      heroText: {
-        marginTop: '25px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        gap: '10px',
-        [theme.breakpoints.down('sm')]: {
-          alignItems: 'center',
-        },
-      },
-      heroImage: {
-          width: '200px'
-      },
-}))
-
+import useStyles from './styles';
 
 const Hero = () => {
     const classes = useStyles();

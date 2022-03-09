@@ -6,60 +6,7 @@ import { Grid, Typography } from '@material-ui/core';
 
 import { Cta } from '../../components';
 
-import { makeStyles } from '@material-ui/core';
-
-const useStyles = makeStyles((theme) => ({
-      container:{
-        width: '100%',
-        overflowX: 'hidden'
-      },
-      subtitle: {
-        fontWeight: '600',
-      },
-      title:{
-        fontWeight: '600'
-      },
-      span:{
-        [theme.breakpoints.down('sm')]: {
-          display: 'none',
-        },
-      },
-      containerItem: {
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        gap: '10px',
-      }, 
-      containerImage: {
-        [theme.breakpoints.down('sm')]: {
-          display: 'none'
-        },
-      }, 
-      listsContainer:{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '100px',
-        [theme.breakpoints.down('sm')]: {
-          gap: '20px',
-        },
-      },
-      list: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        [theme.breakpoints.down('sm')]: {
-          alignItems: 'center',
-        },
-      },
-      listItem: {
-        listStyle: 'none',
-      }
-  }));
-
+import useStyles from './styles';
 
 
 const Contact = () => {

@@ -2,22 +2,9 @@ import React from 'react';
 
 import { images2 } from '../../constants/images'; 
 
-import { makeStyles } from '@material-ui/styles';
 import { Grid, Typography } from '@material-ui/core';
 
-const useStyles = makeStyles((theme)=>({
-    reseauxSociaux: {
-        marginBottom: '100px',
-        },
-      reseauxSociauxItems:{
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        gap: '100px',
-      },
-}))
-
+import useStyles from './styles';
 
 
 const ReseauxSociaux = () => {
@@ -25,21 +12,16 @@ const ReseauxSociaux = () => {
   
     return (
         <div>
-            <Grid className={classes.reseauxSociaux} container justifyContent='space-evenly' alignItems='center' direction='column'>  
-                      <Grid item>
-                          <Typography variant='h6' gutterBottom className={classes.title} >retrouvez-nous sur les réseaux sociaux</Typography>
-                      </Grid>  
-                      
-                      <Grid item className={classes.reseauxSociauxItems}>
-                          { images2.map((image, key)=>(
-                            <div key={key} >
-                              <div>
-                                    <img src={image} alt="" />  
-                              </div>
-                            </div>
-                          ))
-                          }
-                      </Grid> 
+          <div className={classes.titleContainer}>
+            <Typography variant='h6' gutterBottom >retrouvez-nous sur les réseaux sociaux</Typography>
+          </div>
+            <Grid className={classes.reseauxSociaux} spacing={2} container justifyContent='center' alignItems='center'>   
+                  { images2.map((image, key)=>(
+                      <Grid key={key} item xs={7} sm={4} md={4} >
+                            <img className={classes.image} src={image} alt="" />                              
+                        </Grid> 
+                    ))
+                  }
             </Grid>
            
 

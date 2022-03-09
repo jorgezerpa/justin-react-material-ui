@@ -1,23 +1,8 @@
 import React from 'react'
 
 import { Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles((theme) => ({
-    title: {
-        fontWeight: '600',
-    },
-    ContactComponent: {
-        marginTop: '100px',
-        padding: '0 150px',
-        textAlign: 'center',
-        [theme.breakpoints.down('sm')]: {
-            padding: '0 10px',
-          },
-    },
-        
-}));
-
+import useStyles from './styles';
 
 const ContactComponent = () => {
   const classes = useStyles();

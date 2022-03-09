@@ -1,19 +1,8 @@
 import React from 'react'
 
 import { Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles'
 
-const useStyles = makeStyles((theme)=>({
-    savoirFaire: {
-        marginBottom: '100px',
-        padding: '0 150px',
-        [theme.breakpoints.down('sm')]: {
-            padding: '0 10px',
-          width: '100%',
-        },
-      },
-}))
-
+import useStyles from './styles';
 
 const SavoireFaire = () => {
     const classes = useStyles();

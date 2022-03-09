@@ -4,22 +4,8 @@ import { icons } from '../../constants/icons'
 
 
 import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-        container:{
-                padding: '30px 75px',
-                overflowX: 'hidden',
-                width: '100vw',
-                marginTop: '100px',
-                background: '#000',
-                [theme.breakpoints.down('sm')]: {
-                        justifyContent: 'center',
-                
-           }, 
-        },
-      }));
-
+import useStyles from './styles';
 
 
 const Footer = () => {

@@ -7,59 +7,7 @@ import { Grid, Typography } from '@material-ui/core';
 
 import { Cta } from '../../components';
 
-import { makeStyles } from '@material-ui/core';
-
-
-
-const useStyles = makeStyles((theme) => ({
-    title: {
-      fontWeight: '600',
-      [theme.breakpoints.down('sm')]: {
-        fontSize: '3rem',
-      },
-    }, 
-    container:{
-        overflowX: 'hidden',
-        width: '100%',
-        gap: '40px',
-      }, 
-    menuContainer: {
-      with: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '50px',
-    },
-    menuSection: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '30px'
-    },
-    menuItem: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    name:{
-      fontWeight: '600',
-      marginBottom: '10px',
-      [theme.breakpoints.down('sm')]: {
-        fontSize: '1rem',
-      }
-    },
-    description:{
-      [theme.breakpoints.down('sm')]: {
-        fontSize: '.7rem',
-      },
-    }
-
-  }));
-
-
+import useStyles from './styles';
 
 const Menu = () => {
   const classes = useStyles();
@@ -87,7 +35,7 @@ const Menu = () => {
                         {
                           menu.entries.map((item, key)=>(
                               <div className={classes.menuItem}>
-                                <Typography variant='body1'>{item.name}</Typography>
+                                <Typography variant='subtitle1'>{item.name}</Typography>
                                 <Typography variant='body2'>{item.description}</Typography>
                               </div>
                           ))
@@ -99,7 +47,7 @@ const Menu = () => {
                           {
                             menu.plates.map((item, key)=>(
                                 <div className={classes.menuItem}>
-                                  <Typography variant='body1'>{item.name}</Typography>
+                                  <Typography variant='subtitle1'>{item.name}</Typography>
                                   <Typography variant='body2'>{item.description}</Typography>
                                 </div>
                             ))
@@ -111,7 +59,7 @@ const Menu = () => {
                           {
                             menu.deserts.map((item, key)=>(
                                 <div className={classes.menuItem}>
-                                  <Typography variant='body1'>{item.name}</Typography>
+                                  <Typography variant='subtitle1'>{item.name}</Typography>
                                   <Typography variant='body2'>{item.description}</Typography>
                                 </div>
                             ))
@@ -123,7 +71,7 @@ const Menu = () => {
                           {
                             menu.boissons.map((item, key)=>(
                                 <div className={classes.menuItem}>
-                                  <Typography variant='body1'>{item.name}</Typography>
+                                  <Typography variant='subtitle1'>{item.name}</Typography>
                                 </div>
                             ))
                           }
