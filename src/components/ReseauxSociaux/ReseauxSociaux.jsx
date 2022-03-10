@@ -15,7 +15,8 @@ const ReseauxSociaux = () => {
           <div className={classes.titleContainer}>
             <Typography variant='h6' gutterBottom >retrouvez-nous sur les réseaux sociaux</Typography>
           </div>
-            <Grid className={classes.reseauxSociaux} spacing={2} container justifyContent='center' alignItems='center'>   
+                    {/* if I put spacing, appear a second scroll bar */}
+            <Grid className={classes.reseauxSociaux}  container justifyContent='center' alignItems='center'>   
                   { images2.map((image, key)=>(
                       <Grid key={key} item xs={7} sm={4} md={4} >
                             <img className={classes.image} src={image} alt="" />                              

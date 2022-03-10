@@ -15,70 +15,74 @@ const Menu = () => {
   return (
     < >
       <Cta />
-        <div style={{padding:'20px', paddingLeft:'60px'}}>
+        <div className={classes.titleContainer}>
             <Typography variant='h3' className={classes.title}>MENU</Typography>  
             <Typography variant='body1'>
               Nos menus sont <span style={{color: 'rgba(255,0,0,.7)'}}>communs</span> à tous nos restaurants
               </Typography>  
         </div>
 
-      <Grid className={classes.container} container direction='column' justifyContent='center' alignItems='center' spacing={2}>
-          
-          <Grid item>
-                  <img src={logo} alt="" style={{width:'10vw'}} />
-          </Grid> 
+        <div className={classes.imageContainer}>
+            <img src={logo} alt="" style={{width:'100px'}} />
+        </div>
 
-          <Grid item>
-                  <div className={classes.menuContainer}>
-                    <div className={classes.menuSection}>
-                      <Typography variant='h6' >entrées</Typography>
+      <Grid className={classes.container} container direction='column' justifyContent='center' alignItems='center' spacing={2}>
+
+                          <Grid item>
+                              <Typography variant='h6' >entrées</Typography>
+                          </Grid> 
                         {
                           menu.entries.map((item, key)=>(
-                              <div className={classes.menuItem}>
-                                <Typography variant='subtitle1'>{item.name}</Typography>
-                                <Typography variant='body2'>{item.description}</Typography>
-                              </div>
+                              <Grid item className={classes.menuItem}>
+                                  <Typography variant='subtitle1'>{item.name}</Typography>
+                                  <Typography variant='body2'>{item.description}</Typography>  
+                              </Grid> 
+                             
                           ))
                         }
+         
 
-                      </div>
-                    <div className={classes.menuSection}>
-                      <Typography variant='h6' >plats</Typography>
-                          {
-                            menu.plates.map((item, key)=>(
-                                <div className={classes.menuItem}>
+                          <Grid item>
+                              <Typography variant='h6' >plats</Typography>
+                          </Grid> 
+                        {
+                          menu.plates.map((item, key)=>(
+                              <Grid item className={classes.menuItem}>
                                   <Typography variant='subtitle1'>{item.name}</Typography>
-                                  <Typography variant='body2'>{item.description}</Typography>
-                                </div>
-                            ))
-                          }
-                      
-                      </div>
-                    <div className={classes.menuSection}>
-                      <Typography variant='h6' >desserts</Typography>
-                          {
-                            menu.deserts.map((item, key)=>(
-                                <div className={classes.menuItem}>
+                                  <Typography variant='body2'>{item.description}</Typography>  
+                              </Grid> 
+                             
+                          ))
+                        }
+         
+
+                          <Grid item>
+                              <Typography variant='h6' >desserts</Typography>
+                          </Grid> 
+                        {
+                          menu.deserts.map((item, key)=>(
+                              <Grid item className={classes.menuItem}>
                                   <Typography variant='subtitle1'>{item.name}</Typography>
-                                  <Typography variant='body2'>{item.description}</Typography>
-                                </div>
-                            ))
-                          }
-                      
-                      </div>
-                    <div className={classes.menuSection}>
-                      <Typography variant='h6' >boissons</Typography>
-                          {
-                            menu.boissons.map((item, key)=>(
-                                <div className={classes.menuItem}>
+                                  <Typography variant='body2'>{item.description}</Typography>  
+                              </Grid> 
+                             
+                          ))
+                        }
+         
+                        
+                          <Grid item>
+                              <Typography variant='h6' >boissons</Typography>
+                          </Grid> 
+                        {
+                          menu.boissons.map((item, key)=>(
+                              <Grid item className={classes.menuItem}>
                                   <Typography variant='subtitle1'>{item.name}</Typography>
-                                </div>
-                            ))
-                          }
-                      
-                      </div>
-                  </div>
-          </Grid>  
+                                  <Typography variant='body2'>{item.description}</Typography>  
+                              </Grid> 
+                             
+                          ))
+                        }
+         
       </Grid>
     
     </>

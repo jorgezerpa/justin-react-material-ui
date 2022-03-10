@@ -42,7 +42,16 @@ export default createTheme({
       
     },
 
-    
+    overrides: {
+      MuiButton: {
+        root: {
+          textTransform: 'none',
+          fontFamily: 'Bebas Neue, cursive',
+          fontSize: '1.1rem',
+          borderRadius: 'none'
+        }
+      }
+    }
 })
 
 
